@@ -6,6 +6,12 @@ import {
 import { Clock, Users } from "lucide-react";
 import { Brain, Search, Zap } from "lucide-react";
 
+export const navLinks = [
+  { href: "#discover", label: "Discover" },
+  { href: "#how-it-works", label: "How it Works" },
+  { href: "#why-important", label: "Why It Matters" },
+];
+
 export const whyItMattersFeatures: WhyItMattersFeatureItemProps[] = [
   {
     icon: Clock,

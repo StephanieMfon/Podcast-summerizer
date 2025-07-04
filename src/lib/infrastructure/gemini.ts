@@ -5,9 +5,7 @@ export class GeminiService {
   private model: GenerativeModel;
 
   constructor() {
-    this.genAI = new GoogleGenerativeAI(
-      process.env.NEXT_PUBLIC_GEMINI_API_KEY!
-    );
+    this.genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY!);
     this.model = this.genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
   }
 
