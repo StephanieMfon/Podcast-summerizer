@@ -23,14 +23,13 @@ Podcast Summarizer is a Next.js/TypeScript web app that lets users discover, sea
 
 ```
 src/
-  app/                # Next.js app directory (pages, API routes)
-  components/         # UI, layout, and feature components
-  features/           # (Optional) Feature-based modules
-  hooks/              # Custom React hooks
-  lib/                # API, infrastructure, and shared utilities
-  types/              # TypeScript types and interfaces
-  data/               # Static data (genres, etc.)
-public/               # Static assets
+  app/
+  components/
+  hooks/
+  lib/
+  types/
+  data/
+public/
 ```
 
 ## Getting Started

@@ -126,7 +126,7 @@ export interface SummaryDisplayProps {
   episodeTitle: string;
 }
 
-interface ErrorLogData {
+export interface ErrorLogData {
   error: unknown;
   context?: string;
   timestamp?: Date;
