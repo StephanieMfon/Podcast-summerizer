@@ -44,7 +44,7 @@ export function EpisodeDialog({
     <Dialog>
       <DialogTrigger asChild>{trigger}</DialogTrigger>
 
-      <DialogContent className="bg-[#0a0f1c] sm:max-w-[425px] min-w-[75%] border-gray-800 max-h-[85vh] overflow-y-auto">
+      <DialogContent className="bg-[#0a0f1c] sm:max-w-[425px]  border-gray-800 max-h-[85vh] overflow-y-auto">
         <div className="flex gap-4">
           <div className="w-20 flex-shrink-0">
             <PodcastThumbnail
@@ -76,7 +76,7 @@ export function EpisodeDialog({
         </div>
 
         <div
-          className="text-gray-300 [&_a]:text-blue-400 [&_a]:underline [&_a:hover]:text-blue-300"
+          className="text-gray-300 break-words overflow-hidden [&_a]:text-blue-400 [&_a]:underline [&_a:hover]:text-blue-300"
           dangerouslySetInnerHTML={{ __html: episode.description }}
           suppressHydrationWarning={true}
         />
