@@ -64,7 +64,7 @@ export function EpisodeCard({
             </div>
             <Button
               variant="link"
-              className="text-gray-400 p-0 h-auto text-sm self-start"
+              className="text-gray-400 p-0 h-auto text-sm self-start hover:cursor-pointer"
             >
               view more
             </Button>

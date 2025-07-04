@@ -44,7 +44,7 @@ export function EpisodeDialog({
     <Dialog>
       <DialogTrigger asChild>{trigger}</DialogTrigger>
 
-      <DialogContent className="bg-[#0a0f1c] sm:max-w-[425px]  border-gray-800 max-h-[85vh] overflow-y-auto">
+      <DialogContent className="bg-[#0a0f1c] sm:max-w-[425px]  border-gray-800 max-h-[85vh] overflow-y-auto md:max-w-[80%]">
         <div className="flex gap-4">
           <div className="w-20 flex-shrink-0">
             <PodcastThumbnail
@@ -84,7 +84,7 @@ export function EpisodeDialog({
         <Button
           onClick={handleSummarize}
           disabled={isLoading}
-          className="w-full bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 transition-all duration-200 group mt-auto"
+          className="w-full bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 transition-all duration-200 group mt-auto hover:cursor-pointer"
         >
           {isLoading ? (
             <>

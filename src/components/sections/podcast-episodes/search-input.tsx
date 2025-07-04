@@ -61,7 +61,7 @@ export function SearchInput({ defaultValue = "" }: SearchInputProps) {
         <Button
           type="submit"
           disabled={isPending}
-          className="absolute right-3 top-1/2 -translate-y-1/2 w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-700 hover:from-purple-600 hover:to-purple-800 border-0 rounded-xl p-0 transition-all duration-200 flex items-center justify-center shadow-lg disabled:opacity-50"
+          className="absolute right-3 top-1/2 -translate-y-1/2 w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-700 hover:from-purple-600 hover:to-purple-800 border-0 rounded-xl p-0 transition-all duration-200 flex items-center justify-center shadow-lg disabled:opacity-50 hover:cursor-pointer"
         >
           <Search className="w-4 h-4 text-white stroke-2" />
         </Button>
@@ -81,7 +81,7 @@ export function SearchInput({ defaultValue = "" }: SearchInputProps) {
             <button
               key={suggestion}
               type="button"
-              className="w-full text-left px-3 py-2 text-sm text-gray-300 hover:bg-gray-700 rounded-lg transition-colors"
+              className="w-full text-left px-3 py-2 text-sm text-gray-300 hover:bg-gray-700 rounded-lg transition-colors hover:cursor-pointer"
               onClick={() => handleSuggestionClick(suggestion)}
             >
               {suggestion}

@@ -39,7 +39,7 @@ export function SummaryDisplay({ summary }: SummaryDisplayProps) {
               onClick={handleCopy}
               variant="outline"
               size="sm"
-              className="bg-gray/80 text-gray-400 hover:bg-white/50 border-gray-400 hover:border-green-300 transition-all duration-200"
+              className="bg-gray/80 text-gray-400 hover:bg-white/50 border-gray-400 hover:border-green-300 transition-all duration-200 hover:cursor-pointer"
             >
               {copied ? (
                 <>
