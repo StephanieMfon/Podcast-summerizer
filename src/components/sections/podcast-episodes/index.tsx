@@ -124,19 +124,25 @@ export function EpisodesSection({
           </div>
 
           <div
-            className={`grid gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-5 ${
-              isPending || loading ? "opacity-50 pointer-events-none" : ""
-            }`}
+            className={`grid gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-5`}
           >
-            {episodes.map((episode: Episode) => (
-              <div key={episode.id} className="space-y-6">
-                <EpisodeCard
-                  episode={episode}
-                  onSummarize={handleSummarize}
-                  summaries={summaries}
-                />
-              </div>
-            ))}
+            {loading || isPending
+              ? // Skeleton loading
+                Array.from({ length: 10 }, (_, i) => (
+                  <div key={i} className="space-y-6">
+                    <div className="bg-gray-700/50 border border-gray-800 rounded-lg h-59 animate-pulse" />
+                  </div>
+                ))
+              : // Real episodes
+                episodes.map((episode: Episode) => (
+                  <div key={episode.id} className="space-y-6">
+                    <EpisodeCard
+                      episode={episode}
+                      onSummarize={handleSummarize}
+                      summaries={summaries}
+                    />
+                  </div>
+                ))}
           </div>
 
           <div className="text-center mt-12">
