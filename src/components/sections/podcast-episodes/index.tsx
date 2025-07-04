@@ -41,8 +41,6 @@ export function EpisodesSection({
     setError(initialError || null);
   }, [initialError, setError]);
 
-  // Remove debounced search logic entirely
-
   const updateURL = (newParams: Record<string, string | null>) => {
     startTransition(() => {
       const params = new URLSearchParams(searchParams);
@@ -126,7 +124,7 @@ export function EpisodesSection({
           </div>
 
           <div
-            className={`grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-5 ${
+            className={`grid gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-5 ${
               isPending || loading ? "opacity-50 pointer-events-none" : ""
             }`}
           >

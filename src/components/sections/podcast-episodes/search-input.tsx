@@ -14,8 +14,6 @@ export function SearchInput({ defaultValue = "" }: SearchInputProps) {
   const [isSearchFocused, setIsSearchFocused] = useState(false);
   const [isPending, startTransition] = useTransition();
 
-  // Remove debouncedSearch
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchText(e.target.value);
   };
@@ -51,7 +49,7 @@ export function SearchInput({ defaultValue = "" }: SearchInputProps) {
         <Search className="absolute left-6 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5" />
         <Input
           type="text"
-          placeholder="What podcast would you like to summarize today?"
+          placeholder="What's on your mind?"
           value={searchText}
           onChange={handleChange}
           onFocus={() => setIsSearchFocused(true)}
@@ -69,9 +67,8 @@ export function SearchInput({ defaultValue = "" }: SearchInputProps) {
         </Button>
       </form>
 
-      {/* Search Suggestions */}
       {isSearchFocused && (
-        <div className="absolute mt-2 w-full max-w-2xl bg-gray-800 border border-gray-700 rounded-xl shadow-xl z-10 p-2">
+        <div className="absolute mt-2 w-full max-w-[89%] sm:max-w-2xl bg-gray-800 border border-gray-700 rounded-xl shadow-xl z-10 p-2">
           <div className="text-xs text-gray-400 px-3 py-2">
             Popular searches
           </div>
