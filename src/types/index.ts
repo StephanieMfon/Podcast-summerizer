@@ -3,7 +3,8 @@ import { LucideIcon } from "lucide-react";
 export interface Episode {
   id: string;
   title: string;
-  description: string;
+  description_original: string;
+  description_highlighted: string;
   publisher: string;
   thumbnail: string;
   audio: string;

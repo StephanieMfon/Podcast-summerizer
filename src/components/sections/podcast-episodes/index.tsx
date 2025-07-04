@@ -89,7 +89,7 @@ export function EpisodesSection({
     const data = await summarizeEpisode(
       episode.id,
       episode.title,
-      episode.description
+      episode.description_original
     );
 
     if (!data.success) {

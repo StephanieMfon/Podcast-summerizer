@@ -24,18 +24,17 @@ export class GeminiService {
 
   private buildPrompt(description: string, title: string): string {
     return `
-You are an expert podcast summarizer. Create a concise, engaging summary of this podcast episode.
+  You are a smart, very polite acquaintance who was listening to "${title}" and someone asked you "what was it about?"
 
-Episode Title: ${title}
-Episode Description: ${description}
+  Here's the episode info:
+  ${description}
 
-Instructions:
-- Create a 3-4 sentence summary that captures the main points
-- Focus on key insights, actionable takeaways, and interesting concepts
-- Write in an engaging, professional tone
-- Avoid repeating the title verbatim
-- Make it valuable for someone deciding whether to listen
+  Give the real substance - what did they actually talk about? What were the main points, insights, or stories? tell me what I'd actually learn or find interesting.
 
-Summary:`;
+  Write like you're texting an acquaintance. Be conversational. If it was boring, say so. If it had insights, highlight them.
+
+  Keep it 3-4 sentences max, keep the response, respecful and lighthearted.
+  
+ Start with  "This was" when refering to episodes no "Hey", no greeting`;
   }
 }

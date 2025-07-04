@@ -11,8 +11,8 @@ export function PodcastHero({ initialQuery }: PodcastHeroProps) {
             Podcast Summaries
           </h1>
           <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Get instant summaries of any podcast episode. Save time, extract key
-            insights, and decide what&apos;s worth listening to before you
+            Get intelligent summaries of any podcast episode. Save time, extract
+            key insights, and decide what&apos;s worth listening to before you
             commit.
           </p>
           <SearchInput defaultValue={initialQuery} />

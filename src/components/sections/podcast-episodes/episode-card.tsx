@@ -58,7 +58,9 @@ export function EpisodeCard({
             <div>
               <p
                 className="text-gray-400 text-decoration-line text-sm line-clamp-2 leading-relaxed"
-                dangerouslySetInnerHTML={{ __html: episode.description }}
+                dangerouslySetInnerHTML={{
+                  __html: episode.description_highlighted,
+                }}
                 suppressHydrationWarning={true}
               />
             </div>

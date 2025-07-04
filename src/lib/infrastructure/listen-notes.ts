@@ -2,11 +2,13 @@ import { Episode, GetEpisodesParams } from "@/types";
 
 export class ListenNotesService {
   private readonly apiKey: string | undefined;
-  // TODO: update listen notes dummy API
-  private readonly baseUrl = "https://listen-api-test.listennotes.com/api/v2";
+  private readonly baseUrl =
+    process.env.ENVIRONMENT === "staging"
+      ? "https://listen-api.listennotes.com/api/v2"
+      : "https://listen-api-test.listennotes.com/api/v2";
 
   constructor() {
-    this.apiKey = process.env.NEXT_PUBLIC_LISTEN_NOTES_API_KEY;
+    this.apiKey = process.env.LISTEN_NOTES_API_KEY;
   }
 
   async getEpisodes({
@@ -59,8 +61,8 @@ export class ListenNotesService {
         episode.title_original ||
         episode.title_highlighted ||
         "Untitled Episode",
-      description:
-        episode.description_original || episode.description_highlighted || "",
+      description_original: episode.description_original || "",
+      description_highlighted: episode.description_highlighted || "",
       publisher: episode.podcast?.publisher_original || "Unknown Publisher",
       thumbnail:
         episode.thumbnail || episode.image || "/placeholder-podcast.jpg",

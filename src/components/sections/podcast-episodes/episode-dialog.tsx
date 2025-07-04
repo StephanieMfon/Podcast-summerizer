@@ -68,7 +68,7 @@ export function EpisodeDialog({
           </div>
         </div>
 
-        <div className="text-sm text-gray-500">
+        <div className="text-sm text-gray-300">
           <div className="flex items-center gap-1">
             <Clock className="w-4 h-4" />
             <span>{formatDuration(episode.audio_length_sec)}</span>
@@ -77,7 +77,7 @@ export function EpisodeDialog({
 
         <div
           className="text-gray-300 break-words overflow-hidden [&_a]:text-blue-400 [&_a]:underline [&_a:hover]:text-blue-300"
-          dangerouslySetInnerHTML={{ __html: episode.description }}
+          dangerouslySetInnerHTML={{ __html: episode.description_original }}
           suppressHydrationWarning={true}
         />
 

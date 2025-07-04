@@ -8,6 +8,7 @@ import { LRUCache } from "lru-cache";
 const cache = new LRUCache({ max: 500, ttl: 1000 * 60 * 60 * 24 });
 
 export async function POST(request: NextRequest): Promise<NextResponse> {
+  cache.clear();
   try {
     const { episodeId, title, description } = await request.json();
 
