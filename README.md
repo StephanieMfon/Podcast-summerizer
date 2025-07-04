@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Podcast Summarizer
+
+Podcast Summarizer is a Next.js/TypeScript web app that lets users discover, search, and summarize podcast episodes using AI LLM.
+
+## Features
+
+- 🔍 Search and filter podcasts by genre and keyword
+- 📝 AI-powered episode summaries (Gemini API)
+- 🎧 Browse and paginate podcast episodes (Listen Notes API)
+- ⚡ Fast, responsive UI with reusable components
+- 🛡️ Robust error handling and clean architecture
+
+## Tech Stack
+
+- Next.js (App Router)
+- TypeScript
+- Tailwind CSS
+- Listen Notes API
+- Gemini AI API
+- MongoDB (optional, for persistence)
+
+## Project Structure
+
+```
+src/
+  app/                # Next.js app directory (pages, API routes)
+  components/         # UI, layout, and feature components
+  features/           # (Optional) Feature-based modules
+  hooks/              # Custom React hooks
+  lib/                # API, infrastructure, and shared utilities
+  types/              # TypeScript types and interfaces
+  data/               # Static data (genres, etc.)
+public/               # Static assets
+```
 
 ## Getting Started
 
-First, run the development server:
+1. **Install dependencies:**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+   ```sh
+   npm install
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **Set up environment variables:**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+   - Copy `.env.local.sample` to `.env.local` and fill in your API keys.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. **Run the development server:**
 
-## Learn More
+   ```sh
+   npm run dev
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+4. **Open [http://localhost:3000](http://localhost:3000) in your browser.**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Scripts
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `npm run dev` – Start the dev server
+- `npm run lint` – Lint code with ESLint
 
-## Deploy on Vercel
+## Environment Variables
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+See `.env.local.sample` for required variables:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `MONGODB_URI`
+- `GOOGLE_AI_API_KEY`
+- `LISTEN_NOTES_API_KEY`
+- `NEXT_PUBLIC_APP_URL`
