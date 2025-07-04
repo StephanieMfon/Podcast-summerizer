@@ -32,19 +32,24 @@ function WhyItMattersSection() {
                 Ready to get started?
               </h3>
               <p className="text-gray-400">
-                Join thousands of knowledge seekers
+                Get instant summaries of any podcast episode
               </p>
             </div>
 
             <div className="space-y-4">
-              <Button className="w-full bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 h-12">
-                Start Your Journey
-                <ChevronRight className="w-4 h-4 ml-2" />
+              <Button
+                asChild
+                className="w-full bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 h-12"
+              >
+                <a href="#discover">
+                  Start Your Journey
+                  <ChevronRight className="w-4 h-4 ml-2" />
+                </a>
               </Button>
             </div>
 
             <div className="mt-6 pt-6 border-t border-gray-700">
-              <div className="flex items-center justify-center gap-8 text-sm text-gray-500">
+              <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 text-center md:text-sm text-gray-500">
                 <span>✓ Free to start</span>
                 <span>✓ No credit card</span>
                 <span>✓ Instant summaries</span>

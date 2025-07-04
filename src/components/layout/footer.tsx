@@ -11,9 +11,7 @@ function PodcastFooter() {
             </div>
             <span className="font-semibold">PodcastIQ</span>
           </div>
-          <div className="text-sm text-gray-500">
-            © 2025 PodcastIQ. Intelligence-driven discovery.
-          </div>
+          <div className="text-sm text-gray-500">© 2025 PodcastIQ.</div>
         </div>
       </div>
     </footer>
